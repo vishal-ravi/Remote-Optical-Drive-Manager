@@ -1,0 +1,13 @@
+# build context only needs common/ and agent/
+.git
+.venv
+**/__pycache__
+*.py[cod]
+*.egg-info
+.pytest_cache
+.ruff_cache
+build/
+dist/
+*.log
+.coverage
+htmlcov/

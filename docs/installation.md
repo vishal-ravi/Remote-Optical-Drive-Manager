@@ -63,6 +63,9 @@ data root when the profile has none (`Fetch via SSH` in the GUI).
 
 ## 3. Agent (drive host)
 
+Container alternative (Docker image with the tools preinstalled):
+[docs/docker.md](docker.md).
+
 ### Option A — system service as root (recommended)
 
 ```bash

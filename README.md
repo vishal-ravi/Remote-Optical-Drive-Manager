@@ -99,6 +99,9 @@ ssh user@192.168.1.50 'echo key ok'
 The script prints the bearer token (you normally never have to copy it: the
 client fetches it over SSH automatically).
 
+Prefer containers? Build the agent image instead — see
+[docs/docker.md](docs/docker.md): `docker build -t rodm-agent .`
+
 ### 4. Connect
 
 GUI → **Profiles…** → host, SSH user, key path → **Test connection** →
@@ -121,6 +124,7 @@ Full walkthrough: **[docs/user-guide.md](docs/user-guide.md)**.
 | Document | Contents |
 | --- | --- |
 | [docs/installation.md](docs/installation.md) | client setup, SSH keys, agent install modes, services, directories, upgrade/uninstall |
+| [docs/docker.md](docs/docker.md) | containerized agent: build/run, volumes, token, TLS/networking |
 | [docs/user-guide.md](docs/user-guide.md) | GUI tour, profiles, every tab, end-to-end workflows |
 | [docs/agent-cli.md](docs/agent-cli.md) | `rodm-agent` subcommands, flags, config, logs, systemd |
 | [docs/api.md](docs/api.md) | RPC envelope, every operation, REST endpoints, jobs, error codes |
