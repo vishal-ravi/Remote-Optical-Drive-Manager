@@ -1,0 +1,15 @@
+[Unit]
+Description=Remote Optical Drive Manager agent (REST API)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/rodm/bin/rodm-agent serve --host 0.0.0.0 --port 8443
+Restart=on-failure
+RestartSec=3
+# the agent never needs root: mounting goes through udisksctl/polkit
+PrivateTmp=yes
+
+[Install]
+WantedBy=default.target
